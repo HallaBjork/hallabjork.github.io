@@ -1,5 +1,5 @@
 const REV = 6,
-       BRUSHES = ["sketchy", "shaded", "chrome", "fur", "longfur", "web", "", "simple", "ribbon"],
+       BRUSHES = ["sketchy", "shaded", "chrome", "fur", "longfur", "web", "simple", "ribbon"],
        USER_AGENT = navigator.userAgent.toLowerCase();
 
 var SCREEN_WIDTH = window.innerWidth,
@@ -49,20 +49,12 @@ function init()
 	document.body.appendChild(container);
 
 	/*
-	 * TODO: In some browsers a naste "Plugin Missing" window appears and people is getting confused.
-	 * Disabling it until a better way to handle it appears.
-	 * 
-	 * embed = document.createElement('embed');
-	 * embed.id = 'wacom-plugin';
-	 * embed.type = 'application/x-wacom-tablet';
-	 * document.body.appendChild(embed);
-	 *
-	 * wacom = document.embeds["wacom-plugin"];
+	 * TODO: Fix screen hight in fullsize
 	 */
 
 	canvas = document.createElement("canvas");
 	canvas.width = SCREEN_WIDTH;
-	canvas.height = SCREEN_HEIGHT;
+	canvas.height = SCREEN_HEIGHT; 
 	canvas.style.cursor = 'crosshair';
 	container.appendChild(canvas);
 	
