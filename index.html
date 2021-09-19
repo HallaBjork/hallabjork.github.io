@@ -67,7 +67,7 @@
 
 		<div class="container">
 			<div class="btn">
-			  <button class="open-btn">MODEL</button>
+			  <button class="open-btn">CPPN-NEAT</button>
 			</div>
 			<div class="popup">
 			  <div class="popup-overlay"></div>
@@ -77,18 +77,118 @@
 				  <span class="close-btn">&times;</span>
 				  <div class="tabs">
 					<div class="tab-header">
-					  <div class="active">MODEL</div>
-					  <div>GALLERY</div>
+					  <div class="active">GALLERY</div>
+					  <div>MODEL</div>
 					  <div>TUTORIAL</div>
 					</div>
 					<div class="tab-indicator"></div>
 					<div class="tab-body">
 					  <div class="active">
-						<h1>Model</h1>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolor tempore accusamus! Porro molestias, deleniti quae, corporis saepe fuga illum nulla minus vero impedit optio a iste. Accusantium, repellendus inventore!</p>
-					  </div>
+
+				
+<!--This is for the GALLERY  -->  		
+						<style>
+							div.gallery {
+							  border: 1px solid #ccc;
+							}
+							
+							div.gallery:hover {
+							  border: 1px solid #777;
+							}
+							
+							div.gallery img {
+							  width: 100%;
+							  height: auto;
+							}
+							
+							div.desc {
+							  padding: 10px;
+							  text-align: center;
+							}
+							
+							* {
+							  box-sizing: border-box;
+							}
+							
+							.responsive {
+							  padding: 0 6px;
+							  float: left;
+							  width: 24.99999%;
+							}
+							
+							@media only screen and (max-width: 700px) {
+							  .responsive {
+								width: 49.99999%;
+								margin: 6px 0;
+							  }
+							}
+							
+							@media only screen and (max-width: 500px) {
+							  .responsive {
+								width: 100%;
+							  }
+							}
+							
+							.clearfix:after {
+							  content: "";
+							  display: table;
+							  clear: both;
+							}
+							</style>
+							</head>
+							<body>
+							
+							<h2>Responsive Image Gallery</h2>
+							<h4>Resize the browser window to see the effect.</h4>
+							
+							<div class="responsive">
+							  <div class="gallery">
+								<a target="_blank" href="img_5terre.jpg">
+								  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+								</a>
+								<div class="desc">Add a description of the image here</div>
+							  </div>
+							</div>
+							
+							
+							<div class="responsive">
+							  <div class="gallery">
+								<a target="_blank" href="img_forest.jpg">
+								  <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+								</a>
+								<div class="desc">Add a description of the image here</div>
+							  </div>
+							</div>
+							
+							<div class="responsive">
+							  <div class="gallery">
+								<a target="_blank" href="img_lights.jpg">
+								  <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+								</a>
+								<div class="desc">Add a description of the image here</div>
+							  </div>
+							</div>
+							
+							<div class="responsive">
+							  <div class="gallery">
+								<a target="_blank" href="img_mountains.jpg">
+								  <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+								</a>
+								<div class="desc">Add a description of the image here</div>
+							  </div>
+							</div>
+							
+							<div class="clearfix"></div>
+							
+							<div style="padding:6px;">
+							  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+							  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+							</div>
+						
+						
+						</div>
 					  <div>
-						<h1>Gallery</h1>
+						<h1>Model</h1>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolor tempore accusamus! Porro molestias, deleniti quae, corporis saepe fuga illum nulla minus vero impedit optio a iste. Accusantium, repellendus inventore!</p>
 					  </div>
 					  <div>
@@ -120,7 +220,7 @@
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/model.js"></script>
 
-		
+<!--This is for the FULL SCREEN
 		<script>
             addEventListener("click", function() {
         var el = document.documentElement,
@@ -131,6 +231,6 @@
         ;
         rfs.call(el);
     });
-        </script>     
+        </script>   -->  
 	</body>
 </html>
