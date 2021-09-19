@@ -33,7 +33,7 @@ About.prototype =
 
 		text = document.createElement("p");
 		text.style.textAlign = 'center';
-		text.innerHTML = '<a href="https://github.com/HallaBjork/CreativeAITool" target="_blank">Source Code</a>';
+		text.innerHTML = '<a href="https://github.com/HallaBjork/hallabjork.github.io/tree/main/CreativeModel" target="_blank">Source Code</a>';
 		containerText.appendChild(text);
 
 		text = document.createElement("hr");
