@@ -28,7 +28,7 @@ About.prototype =
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = 'This creative AI tool was made as a part of a research project for the MSc Data Science & AI in the Creative Inductries 2021.';
+		text.innerHTML = 'This creative AI application was made as a part of a research project for the MSc Data Science & AI for the Creative Industries final thesis 2021.';
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
@@ -40,7 +40,7 @@ About.prototype =
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = '<em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> are all variations of the neighbour points connection concept. First implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler</a>.';
+		text.innerHTML = 'The model was inspired by the project <a href="https://nbenko1.github.io/#/" target="_blank">Picbreeder</a> and the drawing board is adapted from <a href="https://mrdoob.com/projects/harmony/" target="_blank">Harmony</a> source code. The brushes <em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> were first implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler</a>.';
 		containerText.appendChild(text);
 		
 	},
