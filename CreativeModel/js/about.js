@@ -24,24 +24,16 @@ About.prototype =
 
 		text = document.createElement("p");
 		text.style.textAlign = 'center';		
-		text.innerHTML = '<strong>ABOUT THE CREATIVE AI TOOL</strong> <a href="changelog.txt" target="_blank">';
+		text.innerHTML = '<strong>ABOUT THIS PROJECT</strong> <a href="changelog.txt" target="_blank">';
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = 'This creative tool was made as a part of a research project for the MSc Data Science & AI in the Creative Inductries 2021.';
+		text.innerHTML = 'This creative AI tool was made as a part of a research project for the MSc Data Science & AI in the Creative Inductries 2021.';
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
 		text.style.textAlign = 'center';
 		text.innerHTML = '<a href="https://github.com/HallaBjork/hallabjork.github.io/tree/main/CreativeModel" target="_blank">Source Code</a>';
-		containerText.appendChild(text);
-
-		text = document.createElement("hr");
-		containerText.appendChild(text);
-
-		text = document.createElement("p");
-		text.style.textAlign = 'center';
-		text.innerHTML = 'Brush Size: <span class="key">d</span><span class="key">f</span>, <span class="key">r</span> reset<br />Color Wheel: <span class="key">shift</span>, <span class="key">alt</span> picker<br />';
 		containerText.appendChild(text);
 
 		text = document.createElement("hr");
