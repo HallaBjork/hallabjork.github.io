@@ -372,7 +372,9 @@ function onMenuSave()
 {
 	// window.open(canvas.toDataURL('image/png'),'mywindow');
 	flatten();
-	window.open(flattenCanvas.toDataURL('image/png'),'mywindow');
+	flattenCanvas.toDataURL('image/png'),'mywindow';
+	window.open(canvas, 'image/png');
+	saveCanvas(canvas, 'image/png');
 }
 
 function onMenuClear()
@@ -491,7 +493,8 @@ function onCanvasTouchEnd( event )
 
 function saveToLocalStorage()
 {
-	localStorage.canvas = canvas.toDataURL('image/png');
+	window.setItem('image/png');
+	const image = localStorage.getItem('image/png');
 }
 
 function flatten()
