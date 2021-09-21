@@ -10,6 +10,8 @@ https://github.com/hardmaru/neurogram#license
 
 ### License
 
-**Code Library**	      **License**
-recurrent.js	          MIT 
+**Code Library**      **License**
+
+recurrent.js          MIT 
+
 everything else
