@@ -30,7 +30,7 @@ var model = {};
   // second plane
   var chosenGenome;
   var bigimg;
-  var bigThumbSize = 320;
+  var bigThumbSize = 320;   // controls the size of dowload picture 
   if (!desktopMode) {
     bigThumbSize = 150;
   }
