@@ -381,6 +381,8 @@ function onMenuClear()
 		return;
 		
 	context.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	stop;
+	
 
 	saveToLocalStorage();
 

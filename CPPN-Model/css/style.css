@@ -1,11 +1,12 @@
 
 
 body {
-    margin: 0;
+    position: absolute; 
     overflow-x: hidden;
     font-family: Monospace;
-    font-weight: 200;
+    font-weight: 100;
     display: hidden;
+    padding: 40px 40px 40px 40px;
 }
 
 .col-fixed-405{
@@ -91,6 +92,7 @@ body {
     opacity: 1;
     font-family: Monospace;
     font-weight: 200;
+    
 }
 
 .floating-label-form-group-with-focus label {
@@ -152,6 +154,7 @@ svg {
   stroke: #fff;
   stroke-width: 1.5px;
     cursor: move;
+    
 }
 
 .link {
@@ -180,7 +183,7 @@ svg {
     position: relative;
     margin: 0 auto;
     max-width: 150;
-    max-height: 150
+    max-height: 150;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -191,11 +194,11 @@ svg {
     background: rgba(255,255,255,.65);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
-    transition: all ease .5s 
+    transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -206,7 +209,7 @@ svg {
     margin-top: -12px;
     text-align: center;
     font-size: 1em;
-    color: #000
+    color: #000;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -215,16 +218,16 @@ svg {
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-    margin: 0
+    margin: 0;
 }
 
 #portfolio * {
-    z-index: 2
+    z-index: 2;
 }
 
 @media(min-width:300) {
     #portfolio .portfolio-item {
-        margin: 0 0 15px
+        margin: 0 0 15px;
     }
 }
 
@@ -303,5 +306,4 @@ svg {
 	border: 1px solid #ddd;;
 	border-bottom: 1px solid #ddd;
 	cursor: pointer;
-    margin: 10px
 }
