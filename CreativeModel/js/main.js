@@ -372,9 +372,7 @@ function onMenuSave()
 {
 	// window.open(canvas.toDataURL('image/png'),'mywindow');
 	flatten();
-	flattenCanvas.toDataURL('image/png'),'mywindow';
-	window.open(canvas, 'image/png');
-	saveCanvas(canvas, 'image/png');
+	window.open(flattenCanvas.toDataURL('image/png'),'mywindow');
 }
 
 function onMenuClear()
