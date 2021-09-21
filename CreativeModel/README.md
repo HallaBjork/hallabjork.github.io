@@ -12,6 +12,6 @@ https://github.com/hardmaru/neurogram#license
 
 **Code Library**      **License**
 
-recurrent.js          MIT 
+recurrent.js           MIT 
 
-everything else
+everything else        GNU GPL v3
