@@ -79,7 +79,7 @@ html {
 	background: white;
 	border: 0cm;
 	border-bottom: 1px solid #ddd;
-	/* cursor: pointer; */
+	cursor: pointer;
 
 }
 
@@ -90,8 +90,7 @@ html {
 	background: white;
 	border: 1px solid #ddd;;
 	border-bottom: 1px solid #ddd;
-
-	/* cursor: pointer; */
+	cursor: pointer;
 
 }
 
@@ -102,8 +101,7 @@ html {
 	background: #eee;
 	border: 1px solid #ddd;;
 	border-bottom: 1px solid #ddd;
-	
-	/* cursor: pointer; */
+	cursor: pointer;
 }
 
   .container .btn-holder {
