@@ -1,0 +1,293 @@
+*
+{
+	color: #444;
+	font-family: Monospace;
+	font-size: 12px;
+}
+
+body
+{
+	margin: 0px;
+	overflow: hidden;
+}
+
+select
+{
+	text-transform: uppercase;
+	font-size: 12px;
+	text-align: center;
+}
+
+hr
+{
+	border: 0;
+	height: 1px;
+	background-color: #ccc;
+	margin: 20px 0px;
+}
+
+.gui
+{
+	color: #ccc;
+	width: 320px;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 5px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px;
+	cursor: default;
+}
+
+.button
+{
+	padding: 2px;
+	cursor: pointer;
+}
+
+.key
+{
+	padding: 0px 8px;
+	margin-left: 1px;
+	background-color: #eee;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Monospace';
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+.container {
+
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: right;
+	align-items: right;
+	background: transparent;
+}
+
+.open-btn 	{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0.5rem 1.5rem;
+	background: white;
+	border: 0cm;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+
+}
+
+.tomodel-btn 	{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0.5rem 1.5rem;
+	background: white;
+	border: 1px solid #ddd;;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+
+}
+
+.toboard-btn 	{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0.5rem 1.5rem;
+	background: #eee;
+	border: 1px solid #ddd;;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+
+  .container .btn-holder {
+	justify-content: flex-end;
+	display: flex;
+  }
+
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* background-color: white; */
+}
+.popup-overlay {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+.main-popup {
+	position: absolute;
+	right: 0;
+	height: 100vh;
+	width: 65%;
+	z-index: 1;
+	background: white;
+	padding: 30px 20px;
+	line-height: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(100%);
+}
+.close-btn {
+	border: .6px solid black;
+	padding: 10px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: .5s ease all;
+}
+.close-btn:hover {
+	background: white;
+}
+.popup-content p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+@keyframes slide-in {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-out {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.tabs {
+	position:absolute;
+	top:50%;
+	left:45%;
+	transform:translate(-50%,-50%);
+	width: 90%;
+	height: 100vh;
+  }
+  .tabs .tab-header {
+	background:#fff;
+	padding:10px;
+	display:flex;
+  }
+  .tabs .tab-header > div {
+	position:relative;
+	width:25%;
+	text-align:cetopnter;
+	padding:10px;
+	z-index:2;
+	font-weight:60;
+	color:#888;
+	cursor:pointer;
+	transition:all 300ms ease-in-out;
+  }
+  .tabs .tab-header > div.active {
+	color:#030303;
+  }
+  .tabs .tab-indicator {
+	position:absolute;
+	width:calc(25% - 5px);
+	height:40px;
+	background:#eee;
+	top:10px;
+	left:10px;
+	transition:all 300ms ease-in-out;
+  }
+  .tabs .tab-body {
+	position:relative;
+	padding:20px;
+	background:#fff;
+	border-top:1px solid #ddd;
+	height:calc(100% - 50px);
+	overflow:hidden;
+  }
+  .tabs .tab-body > div {
+	position:absolute;
+	opacity:0;
+	top:-100%;
+	transform:translateY(-10px);
+	transition:opacity 300ms ease-in-out,
+			  transform 300ms ease-in-out;
+  }
+  .tabs .tab-body > div.active {
+	transform:translateY(0px);
+	top:30px;
+	opacity:1;
+  }
+  .tabs .tab-body h1 {
+	color:#222;
+	margin-bottom:10px;
+  }
+  .tabs .tab-body p {
+	color:#555;
+	font-size:12px;
+  }
+
+  /* The grid: Four equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 33%;
+	padding-right: 10px;
+	padding-bottom: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+	opacity: 0.8; 
+	cursor: pointer; 
+  }
+  
+  .column img:hover {
+	opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container2 {
+	position: relative;
+	display: none;
+	padding-top: 50px;
+	padding-bottom: 150px;
+
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	color: white;
+	font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: white;
+	font-size: 35px;
+	cursor: pointer;
+  }
+  
