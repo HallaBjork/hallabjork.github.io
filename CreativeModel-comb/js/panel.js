@@ -14,3 +14,4 @@ for(let i=0;i<tabHeaderNodes.length;i++){
     tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i}) + 10px)`;
   });
 }
+
