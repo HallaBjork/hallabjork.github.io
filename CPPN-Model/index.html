@@ -22,7 +22,16 @@
               <canvas id="imagePlane" width="10" height="10" title="double click on tile to expand"></canvas>
             </div>
     
+            <div class="col-md-12 text-center">
+              <a class="all-btn", style="top: 20px;", id = "startover_button"> RESTART </a>
+              <a class="all-btn", id = "evolve_button"> EVOLVE </a>
+            </div>
+    
             <br/>
+    
+            <div class="col-md-12 text-center">
+              <a class="btn btn-danger btn-md" id = "zoom_selected_button"> detail view </a>
+            </div>
     
           </div>
     
@@ -100,6 +109,19 @@
 
     <script src="model.js"></script>
     
+    
+    <!-- <script
+            var inst = [];
+            inst.push('model\n');
+            inst.pu sh('select up to four images\n');
+            inst.push('mutate selected images\n');
+            if (desktopMode) {
+              inst.push('double click image to expand\n');
+            } else {
+              inst.push('detail view enlarges image\n');
+            }
+            inst.push('model\n'); 
+    </script> -->
     
     <script>
     var timeInst = 0;
