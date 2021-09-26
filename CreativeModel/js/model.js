@@ -30,7 +30,7 @@ var model = {};
   // second plane
   var chosenGenome;
   var bigimg;
-  var bigThumbSize = 800;   // controls the size of dowload picture 
+  var bigThumbSize = 1920;   // controls the size of dowload picture 
   if (!desktopMode) {
     bigThumbSize = 150;
   }
@@ -170,7 +170,7 @@ var model = {};
   }
 
   function drawBigImg(chosen) {
-    bigimg = NetArt.genGenomeImage(chosen, bigThumbSize/1, bigThumbSize/1);
+    bigimg = NetArt.genGenomeImage(chosen, bigThumbSize/1.5, bigThumbSize/1); //The big image proportion
     ctx2.clearRect(0,0,bigThumbSize/1,bigThumbSize/1);
     ctx2.putImageData(bigimg.getCanvasImage(ctx), 0, 0);
     ctx2.scale(1, 1);
