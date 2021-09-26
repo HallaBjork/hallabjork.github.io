@@ -19,7 +19,7 @@ var model = {};
   document.getElementById('imagePlane').height = nRow*fullThumbSize+2;
 
   var maxSelected = 5; // we can only evolve max of 5 genomes
-
+  
   var genome = []; // 2d array of genomes
   var thumb = []; // 2d array of images
 

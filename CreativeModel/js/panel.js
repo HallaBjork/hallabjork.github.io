@@ -1,17 +1,26 @@
-let tabs = document.querySelector(".tabs");
-let tabHeader = tabs.querySelector(".tab-header");
-let tabBody = tabs.querySelector(".tab-body");
-let tabIndicator = tabs.querySelector(".tab-indicator");
-let tabHeaderNodes = tabs.querySelectorAll(".tab-header > div");
-let tabBodyNodes = tabs.querySelectorAll(".tab-body > div");
+const open_btn = document.querySelector('.open-btn');
+const close_btn = document.querySelector('.close-btn');
+const popup = document.querySelector('.popup');
+const main_popup = document.querySelector('.main-popup');
 
-for(let i=0;i<tabHeaderNodes.length;i++){
-  tabHeaderNodes[i].addEventListener("click",function(){
-    tabHeader.querySelector(".active").classList.remove("active");
-    tabHeaderNodes[i].classList.add("active");
-    tabBody.querySelector(".active").classList.remove("active");
-    tabBodyNodes[i].classList.add("active");
-    tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i}) + 10px)`;
-  });
-}
+open_btn.addEventListener('click', () => {
+	popup.style.display = 'flex';
+	main_popup.style.cssText = 'animation:slide-in .5s ease; animation-fill-mode: forwards;';
+});
+
+close_btn.addEventListener('click', () => {
+	main_popup.style.cssText = 'animation:slide-out .5s ease; animation-fill-mode: forwards;';
+	setTimeout(() => {
+		popup.style.display = 'none';
+	}, 500);
+});
+
+window.addEventListener('click', (e) => {
+	if (e.target == document.querySelector('.popup-overlay')) {
+		main_popup.style.cssText = 'animation:slide-out .5s ease; animation-fill-mode: forwards;';
+		setTimeout(() => {
+			popup.style.display = 'none';
+		}, 500);
+	}
+});
 
