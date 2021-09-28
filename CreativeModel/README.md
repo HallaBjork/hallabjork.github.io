@@ -11,10 +11,10 @@ The interactive model was inspired by <a href="https://nbenko1.github.io/#/" tar
 
 ### License
 
-**Code / Library**      **License**
+Harmony / MIT
 
-Recurrent.js            MIT 
+Neurogram / MIT
 
-Harmony                 MIT
+Recurrent.js / MIT 
 
 Everything else         GNU GPL v3
