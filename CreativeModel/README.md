@@ -5,6 +5,8 @@
 ### Interactive Evolutionary Computation (IEC)
 This creative application is a part of a research project for the MSc Data Science & AI for the Creative Industries, Autumn 2021.
 
+*****
+
 <img width="1429" alt="Screenshot 2021-09-28 at 23 32 23" src="https://user-images.githubusercontent.com/61651233/135174814-c7b269bf-b215-418f-afdc-b337ae0d07ec.png">
 
 **About the Research:** Combining CPPNs evolutionary images and traditional drawing methods this research addresses the gap regarding how to design interfaces and machine learning workflows more aligned to the creative practitioner's workflow and requirements. For this purpose, creative practitioners are asked to trial a creative application which allows them to explore a CPPNs model’s parameters and creative output through the applications interface. The optimal end result of this research is; 1) to develop a creative application that combines CPPN evolutionary images and traditional drawing methods augmenting the creative process and; 2) to add to the knowledge of how to design machine learning applications more aligned to creative practitioners’ workflows and requirements as well as supporting them in gaining insight into the operations and possibilities of machine learning systems.
