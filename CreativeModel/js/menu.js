@@ -11,8 +11,10 @@ Menu.prototype =
 	backgroundColor: null,
 	
 	selector: null,
-	save: null,
+	undo: null,
+	range: null,
 	clear: null,
+	save: null,
 	about: null,
 	
 	init: function()
@@ -62,22 +64,27 @@ Menu.prototype =
 
 		space = document.createTextNode(" ");
 		this.container.appendChild(space);
-		
-		this.save = document.createElement("span"); //getElementById('save');
-		this.save.className = 'button';
-		this.save.innerHTML = 'Save';
-		this.container.appendChild(this.save);
+	
+		this.undo = document.createElement("undo");
+		this.undo.className = 'button';
+		this.undo.innerHTML = 'undo';
+		this.container.appendChild(this.undo);
 
 		separator = document.createTextNode(" | ");
 		this.container.appendChild(separator);
-	
-	//	space = document.createTextNode(" ");
-	//	this.container.appendChild(space);
-		
+
 		this.clear = document.createElement("Clear");
 		this.clear.className = 'button';
 		this.clear.innerHTML = 'Clear';
 		this.container.appendChild(this.clear);
+
+		separator = document.createTextNode(" | ");
+		this.container.appendChild(separator);
+
+		this.save = document.createElement("span"); //getElementById('save');
+		this.save.className = 'button';
+		this.save.innerHTML = 'Save';
+		this.container.appendChild(this.save);
 
 		separator = document.createTextNode(" | ");
 		this.container.appendChild(separator);

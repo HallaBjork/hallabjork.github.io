@@ -30,13 +30,15 @@ var model = {};
   // second plane
   var chosenGenome;
   var bigimg;
-  var bigThumbSize = 1920;   // controls the size of dowload picture 
+  var bigThumbSize = 1350;   // controls the size of dowload picture 
   if (!desktopMode) {
     bigThumbSize = 150;
   }
 
-  document.getElementById('selectedPlane').width = bigThumbSize;
-  document.getElementById('selectedPlane').height = bigThumbSize;
+  document.getElementById('selectedPlane').width = window.innerWidth;
+  document.getElementById('selectedPlane').height = window.innerHeight;
+  /* document.getElementById('selectedPlane').width = bigThumbSize;
+  document.getElementById('selectedPlane').height = bigThumbSize; */
 
   var canvas = document.getElementById('imagePlane');
   var ctx = canvas.getContext('2d');
@@ -183,7 +185,7 @@ var model = {};
     i = loc[0];
     j = loc[1];
 
-    $(".col-fixed-640").css("width", bigThumbSize*2+"px");
+    $(".col-fixed-640").css("width", bigThumbSize+"px");
 
     chosenGenome = genome[i][j].copy();
     chosenGenome.roundWeights();
@@ -318,14 +320,13 @@ var model = {};
 
     // redraw selection boxes
     updateSelected();
-
   });
 
   function startSecondScreen() {
     $("#origPicBreederLink").hide();
     clearSelection();
     if (currSelected < 0) return;
-    $("#mainScreen").hide();
+    $("#mainScreen").show();
     $("#secondScreen").show();
     $("#publish_button").show();
     initSecondScreen(currSelected);
@@ -344,15 +345,15 @@ var model = {};
     startSecondScreen();
   });
   if (desktopMode) {
-    $("#zoom_selected_button").hide();
+    $("#zoom_selected_button").show();
   }
 
 
   function mainScreen() {
     clearSelection();
     RenderGraph.removeSVG();
-    $("#secondScreenWarning").text("");
-    $("#model_description").val("");
+  /*  $("#secondScreenWarning").text("");
+    $("#model_description").val(""); */
     $("#secondScreen").hide();
     $("#galleryScreen").hide();
     $("#loadScreen").hide();

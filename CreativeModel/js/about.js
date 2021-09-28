@@ -12,7 +12,7 @@ About.prototype =
 		var text, containerText;
 		
 		this.container = document.createElement("div");
-		this.container.className = 'gui';
+		this.container.className = 'about';
 		this.container.style.position = 'absolute';
 		this.container.style.top = '0px';
 		this.container.style.visibility = 'hidden';
@@ -28,14 +28,14 @@ About.prototype =
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = 'This creative AI application was made as a part of a research project for the MSc Data Science & AI for the Creative Industries final thesis, Autumn 2021.';
+		text.innerHTML = 'This creative application is a part of a research project for the MSc Data Science & AI for the Creative Industries, Autumn 2021.';
 		containerText.appendChild(text);
 
 		text = document.createElement("hr");
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = 'The model was inspired by the project <a href="https://nbenko1.github.io/#/" target="_blank">Picbreeder</a> and adapted from David Ha`s project <a href="https://blog.otoro.net/2015/07/31/neurogram/" target="_blank">Neurogram</a>, an implementation of CPPN-NEAT algorithm with some variations. The drawing board is adapted from <a href="https://mrdoob.com/projects/harmony/" target="_blank">Harmony</a> source code and the brushes <em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> were first implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler</a>.';
+		text.innerHTML = 'The interactive model was inspired by <a href="https://nbenko1.github.io/#/" target="_blank">Picbreeder</a> and adapted from the source code of David Ha`s <a href="https://blog.otoro.net/2015/07/31/neurogram/" target="_blank">Neurogram</a>. The drawing board was adapted from <a href="https://mrdoob.com/projects/harmony/" target="_blank">Harmony</a>’s source code and the brushes <em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> were first implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler</a>.';
 		containerText.appendChild(text);
 
 		text = document.createElement("hr");

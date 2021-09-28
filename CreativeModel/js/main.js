@@ -7,7 +7,7 @@ var SCREEN_WIDTH = window.innerWidth,
     BRUSH_SIZE = 1,
     BRUSH_PRESSURE = 1,
     COLOR = [0, 0, 0],
-    BACKGROUND_COLOR = [250, 250, 250],
+    BACKGROUND_COLOR = [245, 245, 245],
     STORAGE = window.localStorage,
     brush,
     saveTimeOut,
@@ -39,7 +39,7 @@ function init()
 	if (USER_AGENT.search("android") > -1 || USER_AGENT.search("iphone") > -1)
 		BRUSH_SIZE = 2;	
 		
-	if (USER_AGENT.search("safari") > -1 && USER_AGENT.search("chrome") == -1) // Safari
+	if (USER_AGENT.search("safari") > -1 || USER_AGENT.search("chrome") == -1) // Safari &&
 		STORAGE = false;
 	
 	document.body.style.backgroundRepeat = 'no-repeat';
@@ -47,10 +47,6 @@ function init()
 	
 	container = document.createElement('div');
 	document.body.appendChild(container);
-
-	/*
-	 * TODO: Fix screen hight in fullsize
-	 */
 
 	canvas = document.createElement("canvas");
 	canvas.width = SCREEN_WIDTH;
@@ -75,11 +71,14 @@ function init()
 	container.appendChild(backgroundColorSelector.container);	
 	
 	menu = new Menu();
+	menu.selector.addEventListener('change', onMenuSelectorChange, false);
 	menu.foregroundColor.addEventListener('click', onMenuForegroundColor, false);
 	menu.foregroundColor.addEventListener('touchend', onMenuForegroundColor, false);
 	menu.backgroundColor.addEventListener('click', onMenuBackgroundColor, false);
 	menu.backgroundColor.addEventListener('touchend', onMenuBackgroundColor, false);
 	menu.selector.addEventListener('change', onMenuSelectorChange, false);
+	menu.undo.addEventListener('click', onMenuClear, false);
+	menu.undo.addEventListener('touchend', onMenuClear, false);
 	menu.save.addEventListener('click', onMenuSave, false);
 	menu.save.addEventListener('touchend', onMenuSave, false);
 	menu.clear.addEventListener('click', onMenuClear, false);
@@ -524,5 +523,15 @@ function cleanPopUps()
 	{
 		about.hide();
 		isAboutVisible = false;
+	}
+}
+
+function undo_last() {
+	if (index <= 0) {
+		clear_canvas();	
+	} else {
+		index -= 1;
+		restore_array.pop();
+		context.putImageData(restore_array[index], 0, 0);
 	}
 }

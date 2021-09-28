@@ -4,17 +4,18 @@
 		<title>Creative Application</title>
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="style.css">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<link rel="stylesheet" href="style.css">
 		<style type="text/css"></style>
 	</head>
 	<body>
 
-<!-- The EVOLVE button -->
-		<div class="container">
-			<div class="btn">
-			  <button class="open-btn">CANVAS</button>
-			</div>
+<!-- The CANVAS button -->
+	<div class="container">
+		<div class="open-btn">
+			<a id = "canvas-button"> CANVAS </a>
+			<!-- <button class="open-btn">CANVAS</button>-->
+	</div>
 
 <!-- The slide-out panel -->
 		<div class="popup">
@@ -32,75 +33,79 @@
 					<div class="tab-indicator"></div>
 					<div class="tab-body">
 
-	<!-- The MODEL panel-->						
+<!-- The MODEL panel-->						
 		<div class="active">
 			<div id="body" style="display:none">
         		<div class="container" id="mainScreen">
          			<div class="row">
             			<div class="col-md-12">
-        				</div>
-					  <canvas id="imagePlane" width="10" height="10" title="double click on tile to expand"></canvas>
-					  <div class="row"></div>
+					  		<canvas id="imagePlane" width="10" height="10"></canvas>
+						</div>
+						<div class="row"></div>
+						<div class="col-md-12 text-center">
+							<a class="open-btn", id = "startover_button"> RESTART </a>
+							<a class="open-btn", id = "evolve_button"> EVOLVE </a>
+						</div>
 					</div>
-
-					<div class="col-md-12 text-center">
-						<a class="all-btn", id = "startover_button"> RESTART </a>
-						<a class="all-btn", id = "evolve_button"> EVOLVE </a>
-					<!--<a class="all-btn", id = "evolve_button"> TO BOARD </a>-->	
-					</div>
-
-			</div>        
+				</div>        
+			</div>
 		</div>
-	</div>
-
-		<div class="container-fluid" id="secondScreen">
-    
-			<br/>
-	  
-			<div class="row">
-			<div class="col-fixed-640" id="secondScreenArea">
-	  
-			<div class="row">
-			  <div class="col-md-6">
-				<canvas id="selectedPlane" width="10" height="10"></canvas>
-			  </div>
-			  <div class="col-md-3" id="drawGraph"></div>
-			</div>
-	  
-			</div>
-			</div>
-
+		
 
 	<!-- The TUTORIAL panel-->	
 		<div>
 			<h1 style="padding-top:20px">INFORMATION:</h1>
-			<p style="padding-bottom:10px">There is no one right way to use this creative application. The Step-by-step guide is there only for inspiration on how to use the model. The idea is for the user to decide how much and in what way they want the model to be a part of their creative process. This application will not necessarily give you solutions to your creative problems but rather inspiration and insight into options that you might not have thought of. It is all up to you how you interpret the results and the way you choose to use the model.</p> 
+			<p style="padding-bottom:10px">This application combines CPPNs evolutionary images and traditional drawing methods. The guide is there to describe the functions of the model but you choose how you use it and how you interpret the results.</p> 
 					
-			<h1 style="padding-top:40px">STEP-BY-STEP GUIDE:</h1>
-			<p> Step1: Draw an image using the brushes from the drop down in the control panel. </p>
-			<p>	Step2: Save the image and it will appear in GALLERY tap under EVOLVE button.</p>
-			<p>	Step3: Push the EVOLVE button to slide open a panel and choose an image from the GALLERY tab.</p>
-			<p>	Step4: After selecting an image push the TO MODEL button and go to the MODEL tab.</p>
-			<p>	Step5: Use the options as you like to change the models parameters.</p>
-			<p>	Step6: Choose 1-5 images (parents) to evolve the next generation and push the button BREED.</p>
-			<p>	Step7: Repeat steps 5 and 6 as often as you see fit.</p>
-			<p>	Step8: If you see an image that you like you can save it by pushing the SAVE button.</p>
-			<p>	Step9: You can then go to the GALLEY tab and further work on an image by pushing TO BOARD.</p>
-			<p>	Step10: Close the sliding panel and now you can work on the new image and repeat all the steps.</p>
+			<h1 style="padding-top:40px">GUIDE:</h1>
+			<p> <span class="key">•</span> Open the MODEL tab at the top of this panel. </p>
+			<p> <span class="key">•</span> Use the options as you like to explore the model's parameters.</p>
+			<p> <span class="key">•</span> You can choose 1-5 images (parents) to generate the next generation of images.</p>
+			<p> <span class="key">•</span> To evolve the next generation, push the EVOLVE button.</p>
+			<p> <span class="key">•</span> To start a new image selection, push the RESTART button and repeat steps above.</p>
+			<p> <span class="key">•</span> If you want to work on an image, move it to the drawing board by double clicking it.</p>
+			<p> <span class="key">•</span> You can draw using the brushes from the drop down in the control panel on the top left.</p>
+			<p> <span class="key">•</span> To save your work push the SAVE button in the control panel on the top left.</p>
+			<p> <span class="key">•</span> To clear the drawing board push the CLEAR button in the control panel on the top left.</p>
 			
 			<h1 style="padding-top:40px">SHORTCUTS:</h1>
 			<p>Brush Size: <span class="key">d</span>smaller<span class="key">f</span>bigger<br/>
 			Colour Wheel: <span class="key">shift</span><br/>
-			Colour Picker: <span class="key">option</span><br/></p>
-					  
-			</div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
+			Colour Picker: <span class="key">option</span><br/></p>		  
+		</div>
 
+<!--The CANVAS images --> 
+		<canvas id="selectedPlane"></canvas>
+
+<!--The NN image 
+		<div class="container-fluid" id="secondScreen">
+			<br/>
+				<div class="row">
+					<div class="col-fixed-640" id="secondScreenArea">
+						<div class="row">
+			  				<div class="col-md-6"></div>
+			  				<div class="col-md-3" id="drawGraph"></div>
+						</div>
+	  				</div>
+				</div>
+			</div> --> 
+
+
+<!--This is for the FULSCREEN  
+		<script>
+            addEventListener("click", function() {
+        var el = document.documentElement,
+        rfs = el.requestFullscreen
+            || el.webkitRequestFullScreen
+            || el.mozRequestFullScreen
+            || el.msRequestFullscreen 
+        ;
+        rfs.call(el);
+    	});   
+        </script> --> 
+
+
+<!-- The JavaScript -->
 		<script type="text/javascript" src="js/brushes/chrome.js"></script>
 		<script type="text/javascript" src="js/brushes/fur.js"></script>
 		<script type="text/javascript" src="js/brushes/longfur.js"></script>
@@ -117,72 +122,38 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/panel.js"></script>
 		<script type="text/javascript" src="js/tabs.js"></script>
-		<script type="text/javascript" src="js/tutorial.js"></script>
-		<script type="text/javascript" src="js/gallery.js"></script>
 
-<!--This is for the FULSCREEN  
-		<script>
-            addEventListener("click", function() {
-        var el = document.documentElement,
-        rfs = el.requestFullscreen
-            || el.webkitRequestFullScreen
-            || el.mozRequestFullScreen
-            || el.msRequestFullscreen 
-        ;
-        rfs.call(el);
-    	});   
-        </script> --> 
+<!-- Main Libraries -->
+    	<script src="lib/jquery-1.11.3.min.js"></script>
+    	<script src="https://platform.twitter.com/widgets.js"></script>
+    	<!-- <script src="lib/jquery.mobile-1.4.5.min.js"></script> -->
+    	<script src="lib/d3.v3.js"></script>
+    	<script src="lib/cola.js"></script>
+  	 	<!--  <script src="lib/bootstrap.3.2.0.min.js"></script> -->
+    	<script src="lib/mobile-detect.0.4.1.min.js"></script>
 
+    	<script>
+    	// make jQuery sync
+    	jQuery.ajaxSetup({async:false});
 
-    <!-- Main Libraries -->
-    <script src="lib/jquery-1.11.3.min.js"></script>
-    <script src="https://platform.twitter.com/widgets.js"></script>
-    <!-- <script src="lib/jquery.mobile-1.4.5.min.js"></script> -->
-    <script src="lib/d3.v3.js"></script>
-    <script src="lib/cola.js"></script>
-   <!--  <script src="lib/bootstrap.3.2.0.min.js"></script> -->
-    <script src="lib/mobile-detect.0.4.1.min.js"></script>
+    	var md, desktopMode = true;
 
-    <script>
-    // make jQuery sync
-    jQuery.ajaxSetup({async:false});
-
-    var md, desktopMode = true;
-
-    md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile()) {
-        desktopMode = false;
-        console.log('mobile: '+md.mobile());
-    } else {
-        desktopMode = true;
-        console.log('not mobile');
-    }
-
-    </script>
+    	md = new MobileDetect(window.navigator.userAgent);
+    	if (md.mobile()) {
+       		desktopMode = false;
+        	console.log('mobile: '+md.mobile());
+    	} else {
+        	desktopMode = true;
+        	console.log('not mobile');
+   		 }
+		</script>
 
 
-    
-    
-    <!-- <script
-            var inst = [];
-            inst.push('model\n');
-            inst.pu sh('select up to four images\n');
-            inst.push('mutate selected images\n');
-            if (desktopMode) {
-              inst.push('double click image to expand\n');
-            } else {
-              inst.push('detail view enlarges image\n');
-            }
-            inst.push('model\n'); 
-    </script> -->
-    
-	
-       <!-- Our JavaScript -->
-	   <script src="lib/recurrent.js"></script>
-	   <script src="lib/neat.js"></script>
-	   <script src="lib/neat.graph.js"></script>
-	   <script src="lib/netart.js"></script>
-	   <script src="js/model.js"></script>
+		<script src="lib/recurrent.js"></script>
+		<script src="lib/neat.js"></script>
+		<script src="lib/neat.graph.js"></script>
+		<script src="lib/netart.js"></script>
+		<script src="js/model.js"></script>
 	   
 	   
 	   <script>
