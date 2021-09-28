@@ -1,4 +1,4 @@
-# CPPN-NEAT CREATIVE APPLICATION
+# CPPN-NEAT Creative Application
 ### Interactive Evolutionary Computation (IEC)
 
 This creative application is a part of a research project for the MSc Data Science & AI for the Creative Industries, Autumn 2021.
