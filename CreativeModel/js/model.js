@@ -177,6 +177,9 @@ var model = {};
     ctx2.putImageData(bigimg.getCanvasImage(ctx), 0, 0);
     ctx2.scale(1, 1);
     ctx2.drawImage(canvas2, 0, 0);
+    var image_data = canvas2.toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+    document.body.style["background-image"] = "url(" + image_data + ")";
+    document.body.style["background-position"] = "0% 0%"
   }
 
   function initSecondScreen(selection) {
