@@ -30,7 +30,7 @@ var model = {};
   // second plane
   var chosenGenome;
   var bigimg;
-  var bigThumbSize = 1350;   // controls the size of dowload picture 
+  var bigThumbSize = 1590;   // controls the size of dowload picture 
   if (!desktopMode) {
     bigThumbSize = 150;
   }
@@ -212,7 +212,7 @@ var model = {};
   $("#mainScreen").hide();
 
   //if (!desktopMode) {
-  //  $("#drawGraphLoaded").hide();
+$("#drawGraphLoaded").hide();
   //  $("#drawGraph").hide();
   //}
 

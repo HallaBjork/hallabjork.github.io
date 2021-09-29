@@ -10,12 +10,11 @@
 	</head>
 	<body>
 
-<!-- The CANVAS button -->
+<!-- The IMAGES button 
 	<div class="container">
-		<div class="open-btn">
-			<a id = "canvas-button"> CANVAS </a>
-			<!-- <button class="open-btn">CANVAS</button>-->
-	</div>
+		<div class="gui2">
+			<a id = "images-button"> IMAGES </a>
+	</div> -->
 
 <!-- The slide-out panel -->
 		<div class="popup">
@@ -50,7 +49,6 @@
 				</div>        
 			</div>
 		</div>
-		
 
 	<!-- The TUTORIAL panel-->	
 		<div>
@@ -58,24 +56,32 @@
 			<p style="padding-bottom:10px">This application combines CPPNs evolutionary images and traditional drawing methods. The guide is there to describe the functions of the model but you choose how you use it and how you interpret the results.</p> 
 					
 			<h1 style="padding-top:40px">GUIDE:</h1>
-			<p> <span class="key">•</span> Open the MODEL tab at the top of this panel. </p>
+			<p> <span class="key">•</span> Open the <strong>MODEL-TAB</strong> at the top of this panel. </p> 
 			<p> <span class="key">•</span> Use the options as you like to explore the model's parameters.</p>
 			<p> <span class="key">•</span> You can choose 1-5 images (parents) to generate the next generation of images.</p>
-			<p> <span class="key">•</span> To evolve the next generation, push the EVOLVE button.</p>
-			<p> <span class="key">•</span> To start a new image selection, push the RESTART button and repeat steps above.</p>
+			<p> <span class="key">•</span> To evolve the next generation, push the <strong>EVOLVE</strong> button.</p>
+			<p> <span class="key">•</span> To start a new image selection, push the <strong>RESTART</strong> button and repeat steps above.</p>
 			<p> <span class="key">•</span> If you want to work on an image, move it to the drawing board by double clicking it.</p>
 			<p> <span class="key">•</span> You can draw using the brushes from the drop down in the control panel on the top left.</p>
-			<p> <span class="key">•</span> To save your work push the SAVE button in the control panel on the top left.</p>
-			<p> <span class="key">•</span> To clear the drawing board push the CLEAR button in the control panel on the top left.</p>
+			<p> <span class="key">•</span> To save your work push the <strong>SAVE</strong> button in the control panel on the top left.</p>
+			<p> <span class="key">•</span> To clear the drawing board push the <strong>CLEAR</strong> button in the control panel on the top left.</p>
+			<p> <span class="key">•</span> For the best viewing experience use Google Chrome.</p>
 			
 			<h1 style="padding-top:40px">SHORTCUTS:</h1>
 			<p>Brush Size: <span class="key">d</span>smaller<span class="key">f</span>bigger<br/>
 			Colour Wheel: <span class="key">shift</span><br/>
 			Colour Picker: <span class="key">option</span><br/></p>		  
+			
+				</div>
+			</div>
 		</div>
+	</div>
+</div>
 
 <!--The CANVAS images --> 
 		<canvas id="selectedPlane"></canvas>
+	</div>
+
 
 <!--The NN image 
 		<div class="container-fluid" id="secondScreen">
@@ -122,6 +128,7 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/panel.js"></script>
 		<script type="text/javascript" src="js/tabs.js"></script>
+
 
 <!-- Main Libraries -->
     	<script src="lib/jquery-1.11.3.min.js"></script>

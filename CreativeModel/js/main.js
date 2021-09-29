@@ -77,8 +77,8 @@ function init()
 	menu.backgroundColor.addEventListener('click', onMenuBackgroundColor, false);
 	menu.backgroundColor.addEventListener('touchend', onMenuBackgroundColor, false);
 	menu.selector.addEventListener('change', onMenuSelectorChange, false);
-	menu.undo.addEventListener('click', onMenuClear, false);
-	menu.undo.addEventListener('touchend', onMenuClear, false);
+	menu.images.addEventListener('click', onMenuMouseOver, false);
+	menu.images.addEventListener('touchend', onMenuMouseOver, false);
 	menu.save.addEventListener('click', onMenuSave, false);
 	menu.save.addEventListener('touchend', onMenuSave, false);
 	menu.clear.addEventListener('click', onMenuClear, false);

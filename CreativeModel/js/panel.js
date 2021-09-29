@@ -1,9 +1,9 @@
-const open_btn = document.querySelector('.open-btn');
+const images = document.querySelector('images');
 const close_btn = document.querySelector('.close-btn');
 const popup = document.querySelector('.popup');
 const main_popup = document.querySelector('.main-popup');
 
-open_btn.addEventListener('click', () => {
+images.addEventListener('click', () => {
 	popup.style.display = 'flex';
 	main_popup.style.cssText = 'animation:slide-in .5s ease; animation-fill-mode: forwards;';
 });

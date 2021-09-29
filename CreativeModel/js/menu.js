@@ -65,10 +65,10 @@ Menu.prototype =
 		space = document.createTextNode(" ");
 		this.container.appendChild(space);
 	
-		this.undo = document.createElement("undo");
-		this.undo.className = 'button';
-		this.undo.innerHTML = 'undo';
-		this.container.appendChild(this.undo);
+		this.images = document.createElement("images");
+		this.images.className = 'button';
+		this.images.innerHTML = 'images';
+		this.container.appendChild(this.images);
 
 		separator = document.createTextNode(" | ");
 		this.container.appendChild(separator);
