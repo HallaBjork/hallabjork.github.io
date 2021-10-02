@@ -7,11 +7,11 @@ var model = {};
   var nRow = 5;
   var nCol = 5;
   var nImage = nRow * nCol;
-  var thumbSize = 100; // actually 96, but for borders
+  var thumbSize = 100;
   var fullThumbSize = thumbSize+2;
 
   if (!desktopMode) {
-    thumbSize = 75;
+    thumbSize = 100;
     fullThumbSize = thumbSize+2;
   }
 
@@ -30,9 +30,9 @@ var model = {};
   // second plane
   var chosenGenome;
   var bigimg;
-  var bigThumbSize = 1590;   // controls the size of dowload picture 
+  var bigThumbSize = 1920;   // controls the size of dowload picture 
   if (!desktopMode) {
-    bigThumbSize = 150;
+    bigThumbSize = 1920;
   }
 
   document.getElementById('selectedPlane').width = window.innerWidth;
@@ -202,8 +202,8 @@ var model = {};
     var rect2 = canvas2.getBoundingClientRect();
     $("#drawGraph").css({
         "position": "absolute",
-        "top": Math.max(rect2.top, 20) + "px",
-        "left": Math.max(getWidth()/2+10,(desktopMode? 360: 160)) + "px",
+        "top": Math.max(rect2.top, 10) + "px",
+        "left": Math.max((desktopMode? 520: 20)) + "px",
         });
 
     colaGraph = RenderGraph.getGenomeGraph(chosenGenome);

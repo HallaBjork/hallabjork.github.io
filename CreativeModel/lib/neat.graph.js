@@ -102,8 +102,8 @@ var RenderGraph = {};
       'square'  // square
   ];
 
-  var width = desktopMode? 320 : 150,
-      height = desktopMode? 320 : 150;
+  var width = desktopMode? 220 : 120, // SIZE BY MODEL
+      height = desktopMode? 220 : 120; // SIZE BY MODEL
 
   var repelForce = desktopMode? 8 : 4;
 
