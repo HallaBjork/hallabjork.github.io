@@ -42,34 +42,13 @@
 						</div>
 						<div class="row"></div>
 						<div class="col-md-12 text-center">
+							<br>
+							<br/>
 							<a class="open-btn", id = "startover_button"> RESTART </a>
 							<a class="open-btn", id = "evolve_button"> EVOLVE </a>
-							<!--The NN image  --> 
-		<div class="container-fluid" id="secondScreen">
-			<br/>
-				<div class="row">
-					<div class="col-fixed-640" id="secondScreenArea">
-						<div class="row">
-			  				<div class="col-md-6"></div>
-			  				<div class="col-md-3" id="drawGraph"></div>
-
-							  <div class="col-md-3" id="parameterContainer">
-								<p id="paramsHeader">CPPN parameter values</p>
-								<p>Size of hidden layers: 32</p>
-								<p>Number of layers (hidden + output layer): 6</p>
-								<p>Size of latent vector: 3</p>
-							</div>
-
-						</div>
-	  				</div>
-				</div>
-			</div>
-
-			<br>
-			<br>
-			<br/>
-
-			<p>
+						<br>
+						<br>
+						<br/>
 				<label for="activation2">Mutation rate: </label>
 				<select id='activation2'>
 					<option value="sin" selected>sin()</option>
@@ -78,9 +57,40 @@
 					<option value="lin">linear()</option>
 				</select>
 				<input type="range" id="magnitude2" min="1" max="6.2" value="1" step="0.2" class="slider">
-			</p>
+				</div>
 
-
+<!--The NN image  --> 
+		<div class="container-fluid" id="secondScreen">
+			<br/>
+			<br>
+			<br>
+			<br/>
+				<div class="row">
+					<div class="col-fixed-640" id="secondScreenArea">
+						<div class="row">
+			  				<div class="col-md-6"></div>
+			  				<div class="col-md-3" id="drawGraph">
+								<p id="paramsHeader">CPPN-NEAT PARAMETER VALUES</p>
+								<br>
+								<br/>
+								<p>Generation: 3</p>
+								<p>Number of hidden layers: 32</p>
+								<p>Number of layers: 6</p>
+								<p>Size of latent vector: 3</p>
+								<p>Mutation Rate: 3</p>
+								<br>
+								<br/>
+								<br>
+								<br/>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br/>
+							</div>
+	  					</div>
+						</div>
+						</div>
 						</div>
 					</div>
 				</div>        

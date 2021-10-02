@@ -93,7 +93,8 @@ hr { /*The HTML <hr> element represents a Horizontal-rule and it is used for pag
 	letter-spacing: 0.5px;
 	padding: 0.5rem 1.5rem;
 	background: #fff;
-	/*border: 1px solid #ddd;*/
+	border: 1px solid #ddd;
+	margin-right: 10pt;
 	border-bottom: 1px solid #ddd;
 	cursor: pointer;
 }
@@ -567,4 +568,11 @@ form .row:first-child .floating-label-form-group {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+#paramsHeader{
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    margin-top: 5px;
 }

@@ -64,7 +64,7 @@ var model = {};
   }
 
   // initialise NEAT library (set number of inputs and outputs
-  N.init({nInput: 3, nOutput: 4});
+  N.init({nInput: 3, nOutput: 3});
 
   
   // initializes random genomes at the beginning
