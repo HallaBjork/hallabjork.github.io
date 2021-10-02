@@ -20,7 +20,7 @@
 
 | Library / Code  | License       |
 | -------------   | ------------- |
-| Harmony         | MIT           |
+| Harmony         | GNU           |
 | Neurogram       | MIT           | 
 | Recurrent.js    | MIT           | 
 | Everything else | GNU GPL v3    | 
