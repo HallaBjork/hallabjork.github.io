@@ -301,18 +301,3 @@ class abstractANN {
 }
 
 
-$(function() {
-    $( "#sliderNoise" ).slider({
-      max : 0.99,
-      min : 0.01,
-      step : 0.01,
-      value : noiseLevel,
-      change: function (event, ui) {
-        noiseLevel = ui.value;
-        $("#noiseLevel").html("data noise level = "+noiseLevel);
-        if (dataSetChoice <= 3) {
-          generateRandomData();
-        }
-      },
-    });
-});
