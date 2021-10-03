@@ -136,6 +136,9 @@ var N = {};
   var initMu = 0.0, initStdev = 1.0; // randomised param initialisation.
   var mutationRate = 0.2;
   var mutationSize = 0.5;
+  var generationNum = 0;
+
+  var incrementGenerationCounter = function() { generationNum += 1; };
 
   function getRandomRenderMode() {
     // more chance to be 0 (1/2), and then 1/3 to be 1, and 1/6 to be 2
@@ -170,6 +173,8 @@ var N = {};
     nInput = getOption(opt, 'nInput', nInput);
     nOutput = getOption(opt, 'nOutput', nOutput);
     outputIndex = nInput+1; // index of output start (bias so add 1)
+    generationNum = 0; // initialisze the gen counter
+
     // initialise nodes
     for (i=0;i<nInput;i++) {
       nodes.push(NODE_INPUT);
@@ -734,8 +739,10 @@ var N = {};
   global.randomizeRenderMode = randomizeRenderMode;
   global.setRenderMode = setRenderMode;
   global.getRenderMode = getRenderMode;
+
   global.getNumInput = function() { return nInput; };
   global.getNumOutput = function() { return nOutput; };
+  global.incrementGenerationCounter = incrementGenerationCounter;
 
 
 })(N);
