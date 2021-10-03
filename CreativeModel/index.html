@@ -44,39 +44,16 @@
 						<div class="col-md-12 text-center">
 							<br>
 							<br/>
-							<a onclick="resetCounter()" class="open-btn", id = "startover_button"> RESTART </a>
-							<a onclick="incrementClick()" class="open-btn", id = "evolve_button"> EVOLVE </a>
-							
-						<br>
-						<br>
+							<!--The Generation no --> 	
+						<p><strong>Generation number: </strong><a id="counter-label">0</a></p>
+						<br/>
 						<br>
 						<br/>
-						<label for="slider">Generation no: <a id="counter-label">0</a>	 | Mutation rate: </label>
-						<input type="range" id="mutationRate" min="1" max="6.2" value="1" step="0.2" class="slider">
-					</div>
-					
-				<br>
-				<br/>
-				<form action="#">
-
-				<label for="activation2">Activation Selection: </label>
-				<select id='activation2'>
-					<option value="sin" selected>sin()</option>
-					<option value="cos">cos()</option>
-					<option value="tanh">tanh()</option>
-					<option value="lin">linear()</option>
-				</select>
+							<a onclick="resetCounter()" class="open-btn", id = "startover_button"> RESTART </a>
+							<a onclick="incrementClick()" class="open-btn", id = "evolve_button"> EVOLVE </a>
+				</div>
 				
-		
-						<label for="displayColorMode">Colour Mode: </label>
-						<select name="colorMode" id="colorMode">
-						  <option selected="selected">BW</option>
-						  <option>RGB</option>
-						</select>　
-					</form>
-					<br>
-					<br>
-					<br/>
+			
 <!--The NN image  --> 
 		<div class="container-fluid" id="secondScreen">
 			<br/>
@@ -87,18 +64,21 @@
 					<div class="col-fixed-640" id="secondScreenArea">
 						<div class="row">
 			  				<div class="col-fixed-640" id="drawGraph">
-								<br>
-								<br/>
-								<br>
-								<br/>
+							
 								<p id="paramsHeader">CPPN-NEAT PARAMETER VALUES</p>
-								<p id="paramsHeader">FOR SELECTED IMAGE ON CANVAS</p>
+								<p id="paramsHeader">FOR SELECTED IMAGE</p>
 								<br>
 								<br/>
-								<p>Image Generation: <a id="counter-label">0</a></p>
-								<p>Mutation Rate: 0%</p>
-								<p>Activation Functions:</p>
+								<p><strong>Input: </strong>x, y, d, bias</p>
+								<p><strong>Output: </strong>r g b</p>
+								<p><strong>Mutation Rate: </strong>1%</p>
 								<br>
+								<br/>
+								<p><strong>Activation Functions: </strong>Random</p>
+								<p><strong>Connections: </strong>Connections with</p>
+								<p>large weight magnitudes will</p>
+								<p>have a darker and thicker </p>
+								<p>colour than light connections.</p>
 								<br>
 								<br>
 								<br/>
@@ -115,21 +95,19 @@
 	<!-- The TUTORIAL panel-->	
 		<div>
 			<h1 style="padding-top:20px">INFORMATION:</h1>
-			<p style="padding-bottom:10px">This application combines CPPNs evolutionary images and traditional drawing methods. The guide is there to describe the functions of the model but you choose how you use it and how you interpret the results.</p> 
+			<p style="padding-bottom:10px">This application combines CPPNs evolutionary images and traditional drawing methods. The guide is there to describe the functions of the model but you choose how you use it and how you interpret its results.</p> 
 					
 			<h1 style="padding-top:40px">GUIDE:</h1>
-			<p> <span class="key">•</span> Open the <strong>MODEL-TAB</strong> at the top of this panel. </p> 
-			<p> <span class="key">•</span> Use the options as you like to explore the model's parameters.</p>
-			<p> <span class="key">•</span> You can choose 1-5 images (parents) to generate the next generation of images.</p>
-			<p> <span class="key">EVOLVE</span> To evolve the next generation, push the <strong>EVOLVE</strong> button.</p>
-			<p> <span class="key">RESTART</span> To start a new image selection, push the <strong>RESTART</strong> button and repeat steps above.</p>
-			<p> <span class="key">•</span> If you want to work on an image, move it to the drawing board by double clicking it.</p>
-			<p> <span class="key">•</span> Information about the selected image is to the right of the model.</p>
-			<p> <span class="key">•</span> The neural net's connections will have a darker and thicker colour the larger the weight .</p>
-			<p> <span class="key">•</span> You can draw using the brushes from the drop down in the control panel on the top left.</p>
-			<p> <span class="key">SAVE</span> To save your work push the <strong>SAVE</strong> button in the control panel on the top left.</p>
-			<p> <span class="key">CLEAR</span> To clear the drawing board push the <strong>CLEAR</strong> button in the control panel on the top left.</p>
-			<p> <span class="key">•</span> For the best viewing experience use Google Chrome.</p>
+			<p> <span class="key">MODEL</span> Open the model-tab at the top of this panel. </p> 
+			<p> <span class="key">i</span> You can choose 1-5 images (parents) to generate the next generation of images.</p>
+			<p> <span class="key">EVOLVE</span> To evolve the next generation, push the evolve-button.</p>
+			<p> <span class="key">RESTART</span> To start a new image selection, push the restart-button and repeat steps above.</p>
+			<p> <span class="key">i</span> If you want to work on an image, move it to the drawing board by double clicking it.</p>
+			<p> <span class="key">i</span> Information about the selected image is to the right of the model.</p>
+			<p> <span class="key">i</span> You can draw using the brushes from the drop down in the control panel on the top left.</p>
+			<p> <span class="key">SAVE</span> To save your work push the save-button in the control panel on the top left.</p>
+			<p> <span class="key">CLEAR</span> To clear the drawing board push the clear-button in the control panel on the top left.</p>
+			<p> <span class="key">i</span> For the best viewing experience use Google Chrome.</p>
 
 			<h1 style="padding-top:40px">SHORTCUTS:</h1>
 			<p>Brush Size: <span class="key">d</span>smaller<span class="key">f</span>bigger<br/>
