@@ -3,7 +3,7 @@
 
 **Website:** https://hallabjork.github.io/CreativeModel/
 
-<img width="1437" alt="Screenshot 2021-10-02 at 13 00 53" src="https://user-images.githubusercontent.com/61651233/135716973-ad08bd17-a273-401f-9bf6-294cf5500767.png">
+<img width="1440" alt="Screenshot 2021-10-03 at 10 39 45" src="https://user-images.githubusercontent.com/61651233/135748475-e929bc05-19bd-4a10-9fbf-d2417d5377cc.png">
 
 **About the Research:** Addressing the research gap regarding how to utilise machine learning to augment creative processes, this research explores how to present interactive genetic algorithms (IGA) in creative applications and how editing its nodes and connections can work as a creative tool. For this purpose, creative practitioners are asked to trial a creative application that makes use of CPPN-NEAT evolutionary model, allowing them to explore the model’s parameters and its creative output in tandem with traditional drawing methods, iterating between the two. The optimal end result of this research is; 1) to develop a creative application that combines CPPN-NEAT evolutionary images and traditional drawing methods and; 2) to add to the knowledge of how interactive genetic algorithms (IGA) can be utilised to augment the creative process.
 
