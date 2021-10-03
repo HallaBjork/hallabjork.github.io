@@ -1,11 +1,12 @@
-# CPPN-NEAT Creative Application - Interactive Evolutionary Computation (IEC)
+# CPPN-NEAT Creative Application 
 ### This creative application is a part of a research project for the MSc Data Science & AI for the Creative Industries, Autumn 2021.
 
 **Website:** https://hallabjork.github.io/CreativeModel/
 
 <img width="1437" alt="Screenshot 2021-10-02 at 13 00 53" src="https://user-images.githubusercontent.com/61651233/135716973-ad08bd17-a273-401f-9bf6-294cf5500767.png">
 
-**About the Research:** Combining CPPNs evolutionary images and traditional drawing methods this research addresses the gap regarding how to design interfaces and machine learning workflows more aligned to the creative practitioner's workflow and requirements. For this purpose, creative practitioners are asked to trial a creative application which allows them to explore a CPPNs model’s parameters and creative output through the applications interface. The optimal end result of this research is; 1) to develop a creative application that combines CPPN evolutionary images and traditional drawing methods augmenting the creative process and; 2) to add to the knowledge of how to design machine learning applications more aligned to creative practitioners’ workflows and requirements as well as supporting them in gaining insight into the operations and possibilities of machine learning systems.
+**About the Research:** Addressing the research gap regarding how to utilise machine learning to augment creative processes, this research explores how to present interactive genetic algorithms (IGA) in creative applications and how editing its nodes and connections can work as a creative tool. For this purpose, creative practitioners are asked to trial a creative application that makes use of CPPN-NEAT evolutionary model, allowing them to explore the model’s parameters and its creative output in tandem with traditional drawing methods, iterating between the two. The optimal end result of this research is; 1) to develop a creative application that combines CPPN-NEAT evolutionary images and traditional drawing methods and; 2) to add to the knowledge of how interactive genetic algorithms (IGA) can be utilised to augment the creative process.
+
 
 
 | Example #1    | Example #2    | Example #3    |
@@ -19,7 +20,7 @@
 
 | Library / Code  | License       |
 | -------------   | ------------- |
-| Harmony         | MIT           |
+| Harmony         | GNU           |
 | Neurogram       | MIT           | 
 | Recurrent.js    | MIT           | 
 | Everything else | GNU GPL v3    | 
