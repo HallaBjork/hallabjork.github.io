@@ -239,6 +239,7 @@ $("#drawGraphLoaded").hide();
     updateSelected();
   });
 
+
   $("#imagePlane").click(function(){
     $("#origPicBreederLink").hide();
     var ix = selectionList.indexOf(currSelected);
@@ -325,6 +326,7 @@ $("#drawGraphLoaded").hide();
     updateSelected();
   });
 
+  
   function startSecondScreen() {
     $("#origPicBreederLink").hide();
     clearSelection();
@@ -340,6 +342,7 @@ $("#drawGraphLoaded").hide();
       startSecondScreen();
     });
   }
+  
 
   $("#zoom_selected_button").click(function(){
     console.log(lastSelected);
@@ -404,4 +407,17 @@ $("#drawGraphLoaded").hide();
 })(model);
 
 
+var gen = 0;
 
+function incrementClick() {
+    updateDisplay(++gen);
+}
+
+function resetCounter() {
+  gen = 0;
+    updateDisplay(gen);
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}

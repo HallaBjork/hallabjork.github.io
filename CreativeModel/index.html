@@ -15,7 +15,7 @@
 		<div class="gui2">
 			<a id = "images-button"> IMAGES </a>
 	</div> -->
-
+	
 <!-- The slide-out panel -->
 		<div class="popup">
 			  <div class="popup-overlay"></div>
@@ -44,21 +44,38 @@
 						<div class="col-md-12 text-center">
 							<br>
 							<br/>
-							<a class="open-btn", id = "startover_button"> RESTART </a>
-							<a class="open-btn", id = "evolve_button"> EVOLVE </a>
+							<button onclick="resetCounter()" class="open-btn", id = "startover_button"> RESTART </button>
+							<button onclick="incrementClick()" class="open-btn", id = "evolve_button"> EVOLVE </button>
+							
+						<br>
 						<br>
 						<br>
 						<br/>
-				<label for="activation2">Mutation rate: </label>
+						<label for="slider">Generation no: <a id="counter-label">0</a>	 | Mutation rate: </label>
+						<input type="range" id="mutationRate" min="1" max="6.2" value="1" step="0.2" class="slider">
+					</div>
+				<br>
+				<br/>
+				<form action="#">
+
+				<label for="activation2">Activation Selection: </label>
 				<select id='activation2'>
 					<option value="sin" selected>sin()</option>
 					<option value="cos">cos()</option>
 					<option value="tanh">tanh()</option>
 					<option value="lin">linear()</option>
 				</select>
-				<input type="range" id="magnitude2" min="1" max="6.2" value="1" step="0.2" class="slider">
-				</div>
-
+				
+		
+						<label for="displayColorMode">Colour Mode: </label>
+						<select name="colorMode" id="colorMode">
+						  <option selected="selected">BW</option>
+						  <option>RGB</option>
+						</select>　
+					</form>
+					<br>
+					<br>
+					<br/>
 <!--The NN image  --> 
 		<div class="container-fluid" id="secondScreen">
 			<br/>
@@ -68,21 +85,18 @@
 				<div class="row">
 					<div class="col-fixed-640" id="secondScreenArea">
 						<div class="row">
-			  				<div class="col-md-6"></div>
-			  				<div class="col-md-3" id="drawGraph">
+			  				<div class="col-fixed-640" id="drawGraph">
+								<br>
+								<br/>
+								<br>
+								<br/>
 								<p id="paramsHeader">CPPN-NEAT PARAMETER VALUES</p>
+								<p id="paramsHeader">FOR SELECTED IMAGE ON CANVAS</p>
 								<br>
 								<br/>
-								<p>Generation: 3</p>
-								<p>Number of hidden layers: 32</p>
-								<p>Number of layers: 6</p>
-								<p>Size of latent vector: 3</p>
-								<p>Mutation Rate: 3</p>
-								<br>
-								<br/>
-								<br>
-								<br/>
-								<br>
+								<p>Image Generation: <a id="counter-label">0</a></p>
+								<p>Mutation Rate: 0%</p>
+								<p>Activation Functions:</p>
 								<br>
 								<br>
 								<br>
@@ -106,18 +120,22 @@
 			<p> <span class="key">•</span> Open the <strong>MODEL-TAB</strong> at the top of this panel. </p> 
 			<p> <span class="key">•</span> Use the options as you like to explore the model's parameters.</p>
 			<p> <span class="key">•</span> You can choose 1-5 images (parents) to generate the next generation of images.</p>
-			<p> <span class="key">•</span> To evolve the next generation, push the <strong>EVOLVE</strong> button.</p>
-			<p> <span class="key">•</span> To start a new image selection, push the <strong>RESTART</strong> button and repeat steps above.</p>
+			<p> <span class="key">EVOLVE</span> To evolve the next generation, push the <strong>EVOLVE</strong> button.</p>
+			<p> <span class="key">RESTART</span> To start a new image selection, push the <strong>RESTART</strong> button and repeat steps above.</p>
 			<p> <span class="key">•</span> If you want to work on an image, move it to the drawing board by double clicking it.</p>
+			<p> <span class="key">•</span> Information about the selected image is to the right of the model.</p>
+			<p> <span class="key">•</span> The neural net's connections will have a darker and thicker colour the larger the weight .</p>
 			<p> <span class="key">•</span> You can draw using the brushes from the drop down in the control panel on the top left.</p>
-			<p> <span class="key">•</span> To save your work push the <strong>SAVE</strong> button in the control panel on the top left.</p>
-			<p> <span class="key">•</span> To clear the drawing board push the <strong>CLEAR</strong> button in the control panel on the top left.</p>
+			<p> <span class="key">SAVE</span> To save your work push the <strong>SAVE</strong> button in the control panel on the top left.</p>
+			<p> <span class="key">CLEAR</span> To clear the drawing board push the <strong>CLEAR</strong> button in the control panel on the top left.</p>
 			<p> <span class="key">•</span> For the best viewing experience use Google Chrome.</p>
-			
+
 			<h1 style="padding-top:40px">SHORTCUTS:</h1>
 			<p>Brush Size: <span class="key">d</span>smaller<span class="key">f</span>bigger<br/>
 			Colour Wheel: <span class="key">shift</span><br/>
-			Colour Picker: <span class="key">option</span><br/></p>		  
+			Colour Picker: <span class="key">option</span><br/>	
+			Clear Image from Drawing Board: <span class="key">command</span><span class="key">r</span><br/></p>	
+  
 			
 				</div>
 			</div>

@@ -102,8 +102,8 @@ var RenderGraph = {};
       'square'  // square
   ];
 
-  var width = desktopMode? 220 : 120, // SIZE BY MODEL
-      height = desktopMode? 220 : 120; // SIZE BY MODEL
+  var width = desktopMode? 250 : 150, // SIZE BY MODEL
+      height = desktopMode? 250 : 150; // SIZE BY MODEL
 
   var repelForce = desktopMode? 8 : 4;
 
@@ -165,10 +165,11 @@ var RenderGraph = {};
         }
       });
 
-      console.log('graphing, number of nodes = '+graph.nodes.length);
+      //console.log('graphing, number of nodes = '+graph.nodes.length+', number of connections = '+graph.links.length);
 
-      if (graph.nodes.length>300) {
+      if (graph.nodes.length>300 ) {
         // too slow, quit.
+        // || graph.links.length === 0 // or no connections, quit
         removeSVG();
         return;
       }
@@ -176,9 +177,9 @@ var RenderGraph = {};
       d3cola
           .nodes(graph.nodes)
           .links(graph.links)
-          .constraints(graph.constraints)
           .symmetricDiffLinkLengths(repelForce)
-          .start(30, 10, 10);
+          .constraints(graph.constraints)
+          .start(50, 100, 200);
 
       var path = svg.selectAll(".link")
           .data(graph.links)
@@ -186,6 +187,7 @@ var RenderGraph = {};
           .attr('class', 'link')
           .style("stroke-width", function (d) { return Math.max(0.2,Math.log(Math.abs(d.weight)+1.0)); }); // Math.log(Math.abs(d.flows[0]))
 
+      var margin = 0.25, pad = 0.25;
 
       var node = svg.selectAll(".node")
           .data(graph.nodes)
@@ -200,6 +202,7 @@ var RenderGraph = {};
                 }
                 return 1;
             })
+          .attr("label", "x")
           .style("fill", function (d) {
                 if (d.active === 0) {
                     return 'rgba(255, 255, 255, 0)';
@@ -210,6 +213,25 @@ var RenderGraph = {};
 
       node.append("title")
           .text(function (d) { return nameTable[d.name]; });
+
+      var label = svg.selectAll(".label")
+          .data(graph.nodes)
+          .enter().append("text")
+          .attr("class", "label")
+          .text(function (d) {
+            if (nameTable[d.name] === 'input' || nameTable[d.name] === 'output' || nameTable[d.name] === 'bias') {
+              return nameTable[d.name];
+            }
+            return nameTable[d.name];
+          })
+          .call(d3cola.drag)
+          .each(function (d) {
+              var b = this.getBBox();
+              var extra = 2 * margin + 2 * pad;
+              d.width = b.width + extra;
+              d.height = b.height + extra;
+          });
+
 
       d3cola.on("tick", function () {
           path.each(function (d) {
@@ -239,6 +261,33 @@ var RenderGraph = {};
 
           node.attr("cx", function (d) { return d.x; })
               .attr("cy", function (d) { return d.y; });
+
+
+          label
+              .attr("x", function (d) {
+                if (d.name === 0) {
+                  return d.x;
+                } else if (d.name === 1) {
+                  return d.x;
+                } else if (d.name === 2) {
+                  //return d.x-18;
+                  return d.x;
+                }
+                return d.x;
+              })
+              .attr("y", function (d) {
+                var s = 5;
+                if (d.name === 0) {
+                  return d.y + (2 + 2) / 2 + 15;
+                } else if (d.name === 1) {
+                  return d.y - (2 + 2) / 2 - 8;
+                } else if (d.name === 2) {
+                  //return d.y+4.5;
+                  return d.y + (2 + 2) / 2 + 15;
+                }
+                return d.y + (2 + 2) / 2 + 15;
+              });
+
       });
   };
 
@@ -312,14 +361,19 @@ var RenderGraph = {};
 
     var activeNodes = R.zeros(nodes.length);
 
-
     for (i=0,n=genome.connections.length;i<n;i++) {
         cIndex = genome.connections[i][0];
         activeNodes[connections[cIndex][0]] = 1;
         activeNodes[connections[cIndex][1]] = 1;
     }
 
-    var maxWidth = width * 0.95;
+    // make inputs, bias and output nodes active even if they are not connected
+
+    for (i=0,n=nInput+1+nOutput;i<n;i++) {
+      activeNodes[i] = 1;
+    }
+
+    var maxWidth = width * 0.8;
     var maxHeight = height * 0.8;
 
     var g = {
@@ -333,7 +387,8 @@ var RenderGraph = {};
 
     for (i=0, n=len;i<n;i++) {
       //g.nodes.push({name:nodes[i],active:activeNodes[i]});
-      if (activeNodes[i] === 1) { // only push active nodes
+      if (activeNodes[i] === 1 ) { // only push active nodes
+        // || (i < nInput+1) || (i >= len-2-nOutput) // or if input, bias, or output nodes.
         g.nodes.push({name:nodes[i],active:activeNodes[i]});
         indexDict[i] = count;
         count++;
@@ -349,32 +404,33 @@ var RenderGraph = {};
         }
     }
 
-    var factor = 0.90;
-    for (i=0; i < (nInput+1); i++) {
+    var factor = 0.9;
+    //for (i=0; i < (nInput+1); i++) {
+    for (i=nInput; i >=0; i--) {
         widthOffsets.push({
             node: i,
-            offset: (i+0) * maxWidth / (nInput+1)
+            offset: (i+1) * maxWidth / (nInput+0),
         });
         heightOffsets.push({
             node: i,
-            offset: 0
+            offset: maxHeight/1.75,
         });
     }
 
-    for (i=0; i < (nOutput)+1; i++) {
-        outIndex = nOutput+i;
+    for (i=0; i < (nOutput)+0; i++) {
+        outIndex = nInput+1+i;
         widthOffsets.push({
             node: outIndex,
-            offset: (i+0) * maxWidth / (nOutput+1)
+            offset: (i+1) * maxWidth / (nOutput+1),
         });
         heightOffsets.push({
             node: outIndex,
-            offset: -(factor)*maxHeight
+            offset: -maxHeight/3,
         });
     }
 
     // middle init weight
-
+/*
     widthOffsets.push({
       node: outIndex+nOutput,
       offset: 0
@@ -383,14 +439,7 @@ var RenderGraph = {};
       node: outIndex+nOutput,
       offset: -factor*maxHeight*0.5
     });
-
-
-    g.constraints.push(
-        {type:"alignment",
-           axis:"x",
-           offsets: widthOffsets
-       }
-    );
+*/
 
     g.constraints.push(
         {type:"alignment",
@@ -399,6 +448,17 @@ var RenderGraph = {};
        }
     );
 
+    g.constraints.push(
+        {type:"alignment",
+           axis:"x",
+           offsets: widthOffsets
+       }
+    );
+/*
+    console.log(maxWidth);
+    console.log(maxHeight);
+    console.log(g.constraints);
+*/
     return g;
 
   };
