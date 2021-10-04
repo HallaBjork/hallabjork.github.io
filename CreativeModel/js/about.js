@@ -35,7 +35,7 @@ About.prototype =
 		containerText.appendChild(text);
 
 		text = document.createElement("p");
-		text.innerHTML = 'The interactive model was inspired by <a href="https://nbenko1.github.io/#/" target="_blank">Picbreeder</a> and adapted from the source code of David Ha`s <a href="https://blog.otoro.net/2015/07/31/neurogram/" target="_blank">Neurogram</a>. The drawing board was adapted from <a href="https://github.com/mrdoob/harmony" target="_blank">Harmony</a>’s source code and the brushes <em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> were first implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler</a>.';
+		text.innerHTML = 'The interactive model was inspired by <a href="https://nbenko1.github.io/#/" target="_blank">Picbreeder</a> and adapted from the source code of <a href="https://blog.otoro.net/2015/07/31/neurogram/" target="_blank">Neurogram</a>. The drawing board was adapted from <a href="https://github.com/mrdoob/harmony" target="_blank">Harmony</a>’s source code and the brushes <em>Sketchy</em>, <em>Shaded</em>, <em>Chrome</em>, <em>Fur</em>, <em>LongFur</em> and <em>Web</em> were first implemented in <a href="http://www.zefrank.com/scribbler/" target="_blank">The Scribbler.</a>.';
 		containerText.appendChild(text);
 
 		text = document.createElement("hr");
