@@ -1,3 +1,5 @@
+// From https://codepen.io/Web_Cifar/pen/qBEvGrZ
+
 let tabs = document.querySelector(".tabs");
 let tabHeader = tabs.querySelector(".tab-header");
 let tabBody = tabs.querySelector(".tab-body");

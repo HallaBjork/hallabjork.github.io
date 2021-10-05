@@ -1,3 +1,5 @@
+// Adapted from https://github.com/mrdoob/harmony
+
 function About()
 {
 	this.init();	

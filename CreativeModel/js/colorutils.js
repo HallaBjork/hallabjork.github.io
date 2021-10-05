@@ -1,3 +1,5 @@
+// From https://github.com/mrdoob/harmony
+
 function HSB2RGB(hue, sat, val)
 {
 	var red, green, blue,

@@ -1,3 +1,5 @@
+// From https://github.com/mrdoob/harmony
+
 function shaded( context )
 {
 	this.init( context );

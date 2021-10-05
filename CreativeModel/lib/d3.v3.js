@@ -1,3 +1,5 @@
+// From https://github.com/hardmaru/neurogram
+
 !function() {
   var d3 = {
     version: "3.4.11"

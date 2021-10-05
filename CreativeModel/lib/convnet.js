@@ -1,3 +1,5 @@
+// From https://github.com/hardmaru/neurogram
+
 var convnetjs = convnetjs || { REVISION: 'ALPHA' };
 (function(global) {
   "use strict";

@@ -1,3 +1,6 @@
+// Adapted from https://github.com/mrdoob/harmony
+
+
 const REV = 6,
        BRUSHES = ["chrome", "sketchy", "shaded", "fur", "longfur", "web", "simple", "ribbon"],
        USER_AGENT = navigator.userAgent.toLowerCase();

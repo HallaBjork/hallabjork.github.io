@@ -1,3 +1,5 @@
+// From https://github.com/mrdoob/harmony
+
 function Palette()
 {
 	var canvas, context, offsetx, offsety, radius = 90,

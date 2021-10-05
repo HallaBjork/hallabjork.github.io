@@ -1,3 +1,6 @@
+// From https://github.com/mrdoob/harmony
+
+
 function fur( context )
 {
 	this.init( context );

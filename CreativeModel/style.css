@@ -1,3 +1,6 @@
+/* Adapted from https://github.com/hardmaru/neurogram, https://github.com/mrdoob/harmony, https://codepen.io/Web_Cifar/pen/qBEvGrZ*/
+
+
 * { /*The * means "all elements" (a universal selector)*/
 	color: #444;
 	font-family: Monospace;

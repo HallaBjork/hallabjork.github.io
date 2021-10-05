@@ -1,3 +1,5 @@
+// From https://codepen.io/Web_Cifar/pen/qBEvGrZ
+
 const images = document.querySelector('images');
 const close_btn = document.querySelector('.close-btn');
 const popup = document.querySelector('.popup');
