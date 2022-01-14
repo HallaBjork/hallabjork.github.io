@@ -1,4 +1,4 @@
-# CPPN-NEAT Creative Application 
+# Creative IEC Application 
 ### This creative application is a part of a research project for the MSc Data Science & AI for the Creative Industries, Autumn 2021.
 
 **Website:** https://hallabjork.github.io/CreativeModel/
